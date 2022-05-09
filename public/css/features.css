@@ -1,0 +1,30 @@
+body {
+  background-color: #36393f;
+  text-align: center;
+}
+h3 {
+  display: inline;
+}
+h4 {
+  display: inline;
+}
+img {
+  height: 18em;
+  border-radius: 1em;
+}
+
+.feature {
+  display: flex;
+  padding: 1.5em;
+  background-color: #232529;
+  border-radius: 1em;
+  margin: 1em;
+  width: 40%
+}
+.features {
+  color: #D9DADB
+}
+.feature_text {
+  text-align: initial;
+  margin-left: 1em;
+}
