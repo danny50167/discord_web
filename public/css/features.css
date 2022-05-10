@@ -19,7 +19,7 @@ img {
   background-color: #232529;
   border-radius: 1em;
   margin: 1em;
-  width: 40%
+  width: 60%
 }
 .features {
   color: #D9DADB
@@ -27,4 +27,8 @@ img {
 .feature_text {
   text-align: initial;
   margin-left: 1em;
+}
+
+.container {
+  margin-left: calc(22%);
 }
