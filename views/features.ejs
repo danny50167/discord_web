@@ -14,20 +14,22 @@
     />
     <title>도트-기능</title>
 
-    <%- include('partials/navigation'); %>
+    <%- include('navigation'); %>
   </head>
   <body>
     <div class="container">
       <% for (const i of jsonData) { %>
-        <div class="feature">
-          <img class="features features_img" src="img/features/<%=i.img%>.png" />
-          <div class="feature_text">
-            <h3 class="features features_h3"><%= i.title %></h3><br>
-            <h4 class="features features_span">사용법: <%= i.command %></h4><br>
-            <span class="features features_h5"><%= i.desc %></span>
-          </div>
+      <div class="feature">
+        <img class="features features_img" src="img/features/<%=i.img%>.png" />
+        <div class="feature_text">
+          <h3 class="features features_h3"><%= i.title %></h3>
+          <br />
+          <h4 class="features features_span">사용법: <%= i.command %></h4>
+          <br />
+          <span class="features features_h5"><%= i.desc %></span>
         </div>
-        <% } %>
+      </div>
+      <% } %>
     </div>
     <script src="cli_js/underline.js"></script>
   </body>
