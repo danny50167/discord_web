@@ -13,6 +13,7 @@ app.use(express.static("public"));
 
 app.get("/", (req, res) => {
   res.render("home");
+  console.log("hello")
 })
 
 app.get("/features", (req,res) => {
