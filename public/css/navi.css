@@ -10,9 +10,16 @@ body {
 
 #div_navigationBar {
   height: 6em;
+  padding: 1em;
   position: relative;
-  background-color: #36393f;
+  background-color: #2a2d31;
+  transition: 1s;
 }
+
+#div_navigationBar:hover {
+  height: 10em;
+}
+
 .verticalAlign {
   margin: 0;
   position: absolute;
@@ -32,4 +39,8 @@ body {
 
 .dot_profile {
   height: 3em;
+  transition: 1s;
+}
+.dot_profile:hover {
+  scale: 1.2;
 }

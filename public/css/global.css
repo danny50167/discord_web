@@ -1,5 +1,7 @@
 * {
   font-family: 'Noto Sans KR', sans-serif;
+  transition: 1s;
+  user-select: none;
 }
 
 body {

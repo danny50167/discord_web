@@ -13,7 +13,11 @@ app.use(express.static("public"));
 
 app.get("/", (req, res) => {
   res.render("home");
-  console.log("hello");
+  const parseIp = (req) =>
+    req.headers["x-forwarded-for"]?.split(",").shift() ||
+    req.socket?.remoteAddress;
+
+  console.log(parseIp(req));
 });
 
 app.get("/features", (req, res) => {
