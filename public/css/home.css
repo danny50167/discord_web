@@ -17,8 +17,9 @@ h1 {
 #botAddingLink {
   border: 0;
   background: none;
-  color: rgb(129, 129, 203);
+  color: #ffde7e;
   font-size: 1.3em;
+  cursor: pointer;
 }
 
 #container {

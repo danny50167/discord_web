@@ -3,6 +3,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
+const { redirect } = require("express/lib/response");
 
 const app = express();
 
@@ -13,11 +14,6 @@ app.use(express.static("public"));
 
 app.get("/", (req, res) => {
   res.render("home");
-  const parseIp = (req) =>
-    req.headers["x-forwarded-for"]?.split(",").shift() ||
-    req.socket?.remoteAddress;
-
-  console.log(parseIp(req));
 });
 
 app.get("/features", (req, res) => {
@@ -29,6 +25,15 @@ app.get("/features", (req, res) => {
 app.get("/suggestions", (req, res) => {
   res.render("suggestions");
 });
+app.post("/suggestions", (req,res) => {
+  const userEmail = req.body.userEmail;
+  const content = req.body.content;
+
+  console.log(`${userEmail}: ${content}`);
+  // res.redirect("/")
+});
+
+app.get("/")
 
 app.listen(3000, function () {
   console.log("Server started on port 3000");

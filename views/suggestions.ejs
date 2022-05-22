@@ -5,10 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/suggestions.css">
     <title>도트-문의</title>
   </head>
   <body>
-    <input type="text" name="userEmail" id="input_userEmail" />
-    <input type="text" name="content" id="input_content" />
+    <%- include('navigation'); %>
+
+    <form action="/suggestions" method="post" id="form">
+      <input type="text" name="userEmail" id="input_userEmail"  placeholder="이메일: "/ required><br>
+      <input type="text" name="content" id="input_content" placeholder="내용: " / required>
+      <br>
+
+      <button id="btn_submit" type="submit">제출</button>
+    </form>
   </body>
 </html>
